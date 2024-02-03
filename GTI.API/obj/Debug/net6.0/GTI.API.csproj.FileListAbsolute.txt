@@ -188,3 +188,4 @@ C:\Projetos\GTI.API\GTI.API\obj\Debug\net6.0\refint\GTI.API.dll
 C:\Projetos\GTI.API\GTI.API\obj\Debug\net6.0\GTI.API.pdb
 C:\Projetos\GTI.API\GTI.API\obj\Debug\net6.0\GTI.API.genruntimeconfig.cache
 C:\Projetos\GTI.API\GTI.API\obj\Debug\net6.0\ref\GTI.API.dll
+C:\Projetos\GTI.API\GTI.API\obj\Debug\net6.0\GTI.API.sourcelink.json

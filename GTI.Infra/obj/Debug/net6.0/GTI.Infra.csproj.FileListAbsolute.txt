@@ -40,3 +40,4 @@ C:\Projetos\GTI.API\GTI.Infra\obj\Debug\net6.0\refint\GTI.Infra.dll
 C:\Projetos\GTI.API\GTI.Infra\obj\Debug\net6.0\GTI.Infra.pdb
 C:\Projetos\GTI.API\GTI.Infra\obj\Debug\net6.0\GTI.Infra.genruntimeconfig.cache
 C:\Projetos\GTI.API\GTI.Infra\obj\Debug\net6.0\ref\GTI.Infra.dll
+C:\Projetos\GTI.API\GTI.Infra\obj\Debug\net6.0\GTI.Infra.sourcelink.json

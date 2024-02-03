@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "GTI.API/1.0.0": {
         "dependencies": {
+          "GTI.Domain": "1.0.0",
           "GTI.Infra": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "7.0.15",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.15",
