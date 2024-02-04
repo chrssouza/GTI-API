@@ -1061,16 +1061,6 @@
           }
         }
       },
-      "GTI.Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/GTI.Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/GTI.Application.dll": {}
-        }
-      },
       "GTI.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2916,11 +2906,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "GTI.Application/1.0.0": {
-      "type": "project",
-      "path": "../GTI.Application/GTI.Application.csproj",
-      "msbuildProject": "../GTI.Application/GTI.Application.csproj"
-    },
     "GTI.Domain/1.0.0": {
       "type": "project",
       "path": "../GTI.Domain/GTI.Domain.csproj",
@@ -2934,7 +2919,6 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "GTI.Application >= 1.0.0",
       "GTI.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.15",
       "Microsoft.EntityFrameworkCore.Abstractions >= 7.0.15",
@@ -2975,9 +2959,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Projetos\\GTI.API\\GTI.Application\\GTI.Application.csproj": {
-              "projectPath": "C:\\Projetos\\GTI.API\\GTI.Application\\GTI.Application.csproj"
-            },
             "C:\\Projetos\\GTI.API\\GTI.Domain\\GTI.Domain.csproj": {
               "projectPath": "C:\\Projetos\\GTI.API\\GTI.Domain\\GTI.Domain.csproj"
             }

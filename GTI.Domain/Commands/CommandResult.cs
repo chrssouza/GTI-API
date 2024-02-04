@@ -1,4 +1,4 @@
-﻿using GTI.Shared.Commands;
+﻿using GTI.Shared.Commands.Interfaces;
 
 namespace GTI.Domain.Commands
 {

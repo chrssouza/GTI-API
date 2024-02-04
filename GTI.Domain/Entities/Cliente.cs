@@ -4,6 +4,20 @@ namespace GTI.Domain.Entities
 {
     public class Cliente : Entity
     {
+        public Cliente(string cpf, string nome, string rg, DateTime dataExpedicao, string orgaoExpedicao, string uf, DateTime dataDeNascimento, string sexo, string estadoCivil)
+        {
+            Cpf = cpf;
+            Nome = nome;
+            Rg = rg;
+            DataExpedicao = dataExpedicao;
+            OrgaoExpedicao = orgaoExpedicao;
+            Uf = uf;
+            DataDeNascimento = dataDeNascimento;
+            Sexo = sexo;
+            EstadoCivil = estadoCivil;
+            Enderecos = new List<Endereco>();
+        }
+
         protected Cliente() { }
 
         public string Cpf { get; private set; }
