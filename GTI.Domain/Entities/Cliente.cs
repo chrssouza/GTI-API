@@ -29,6 +29,6 @@ namespace GTI.Domain.Entities
         public DateTime DataDeNascimento { get; private set; }
         public string Sexo { get; private set; }
         public string EstadoCivil { get; private set; }
-        public IList<Endereco> Enderecos {  get; private set; }
+        public IList<Endereco> Enderecos {  get; private set; } 
     }
 }

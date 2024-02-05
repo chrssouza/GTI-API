@@ -2,19 +2,17 @@
 
 namespace GTI.Domain.Commands.Clientes
 {
-
     public class CreateClienteCommand : ICommand
     {
-        
-        public string? Cpf { get; private set; }
-        public string? Nome { get; private set; }
-        public string? Rg { get; private set; }
-        public DateTime  DataExpedicao { get; private set; }
-        public string? OrgaoExpedicao { get; private set; }
-        public string? Uf { get; private set; }
-        public DateTime DataDeNascimento { get; private set; }
-        public string? Sexo { get; private set; }
-        public string? EstadoCivil { get; private set; }
+        public string Cpf { get; set; }
+        public string Nome { get; set; }
+        public string Rg { get; set; }
+        public DateTime DataExpedicao { get; set; }
+        public string OrgaoExpedicao { get; set; }
+        public string Uf { get; set; }
+        public DateTime DataDeNascimento { get; set; }
+        public string Sexo { get; set; }
+        public string EstadoCivil { get; set; }
 
         public void Validate()
         {
