@@ -1,8 +1,10 @@
-﻿using GTI.Shared.Commands.Interfaces;
+﻿using GTI.Domain.Commands.Enderecos;
+using GTI.Domain.Contracts.Clientes;
+using GTI.Shared.Commands;
 
 namespace GTI.Domain.Commands.Clientes
 {
-    public class CreateClienteCommand : ICommand
+    public class CreateClienteCommand : BaseCommand
     {
         public string Cpf { get; set; }
         public string Nome { get; set; }
@@ -13,10 +15,11 @@ namespace GTI.Domain.Commands.Clientes
         public DateTime DataDeNascimento { get; set; }
         public string Sexo { get; set; }
         public string EstadoCivil { get; set; }
+        public CreateEnderecoCommand Endereco { get; set; }
 
-        public void Validate()
+        public override void Validate()
         {
-            throw new NotImplementedException();
+            AddNotifications(new CreateClienteContract(this));
         }
     }
 }
