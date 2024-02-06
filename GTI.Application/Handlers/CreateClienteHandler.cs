@@ -5,16 +5,16 @@ using GTI.Shared.Handlers;
 
 namespace GTI.Application.Handlers
 {
-    public class ClienteHandler : IHandler<CreateClienteCommand>
+    public class CreateClienteHandler : IHandler<CreateClienteCommand>
     {
         private readonly IClienteService _clienteService;
 
-        public ClienteHandler(IClienteService clienteService)
+        public CreateClienteHandler(IClienteService clienteService)
         {
             _clienteService = clienteService;
         }
 
-        public async Task<ICommandResult> ExecuteCommand(CreateClienteCommand command)
+        public async Task<ICommandResult> Handle(CreateClienteCommand command)
         {
             return await _clienteService.CreateCliente(command);
         }
