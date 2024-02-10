@@ -36,7 +36,7 @@ namespace GTI.Infra.Migrations
                     b.Property<DateTime>("DataDeNascimento")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DataExpedicao")
+                    b.Property<DateTime?>("DataExpedicao")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("EstadoCivil")
@@ -48,11 +48,9 @@ namespace GTI.Infra.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("OrgaoExpedicao")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Rg")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Sexo")
@@ -60,7 +58,6 @@ namespace GTI.Infra.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Uf")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -91,7 +88,6 @@ namespace GTI.Infra.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Complemento")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Logradouro")

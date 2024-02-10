@@ -1,0 +1,182 @@
+﻿@using GTI.MVC.Enums
+@model GTI.MVC.Models.ClienteViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar</h1>
+
+<h4>Cliente</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+
+            <div class="row mb-1">
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="Cpf" class="control-label">CPF *</label>
+                        <input asp-for="Cpf" class="form-control" />
+                        <span asp-validation-for="Cpf" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label asp-for="Nome" class="control-label">Nome *</label>
+                        <input asp-for="Nome" class="form-control" />
+                        <span asp-validation-for="Nome" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-1">
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="Rg" class="control-label">RG</label>
+                        <input asp-for="Rg" class="form-control" />
+                        <span asp-validation-for="Rg" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="DataExpedicao" class="control-label">Data Expedição</label>
+                        <input asp-for="DataExpedicao" class="form-control" />
+                        <span asp-validation-for="DataExpedicao" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="OrgaoExpedicao" class="control-label">Orgão Expedição</label>
+                        @Html.DropDownListFor(model => model.OrgaoExpedicao, Enum.GetValues(typeof(EOrgaoExpedicao)).Cast<EOrgaoExpedicao>().Select(v => new SelectListItem
+                   {
+                       Text = v.ToString(),
+                       Value = v.ToString()
+                   }), "--- Opções --- ▼", new { @class = "form-control" })
+                        <span asp-validation-for="OrgaoExpedicao" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="Uf" class="control-label">UF Expedição</label>
+                        @Html.DropDownListFor(model => model.Uf, Enum.GetValues(typeof(EUF)).Cast<EUF>().Select(v => new SelectListItem
+                   {
+                       Text = v.ToString(),
+                       Value = v.ToString()
+                   }), "--- Opções --- ▼", new { @class = "form-control" })
+                        <span asp-validation-for="Uf" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="DataDeNascimento" class="control-label">Data de Nascimento *</label>
+                        <input asp-for="DataDeNascimento" class="form-control" />
+                        <span asp-validation-for="DataDeNascimento" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="Sexo" class="control-label">Sexo *</label>
+                        <select asp-for="Sexo" class="form-control">
+                            <option value="" disabled selected>--- Opções --- ▼</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                        </select>
+                        <span asp-validation-for="Sexo" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="EstadoCivil" class="control-label">Estado Civil *</label>
+                        <select asp-for="EstadoCivil" class="form-control">
+                            <option value="" disabled selected>--- Opções --- ▼</option>
+                            <option value="Solteiro(a)">Solteiro(a)</option>
+                            <option value="Casado(a)">Casado(a)</option>
+                            <option value="Viúvo(a">Viúvo(a)</option>
+                            <option value="Divorciado(a)">Divorciado(a)</option>
+                        </select>
+                        <span asp-validation-for="EstadoCivil" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <h4>Endereço</h4>
+            <hr />
+
+            <div class="row mb-1">
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="Enderecos[0].Cep" class="control-label">CEP *</label>
+                        <input asp-for="Enderecos[0].Cep" class="form-control" />
+                        <span asp-validation-for="Enderecos[0].Cep" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="Enderecos[0].Logradouro" class="control-label">Rua *</label>
+                        <input asp-for="Enderecos[0].Logradouro" class="form-control" />
+                        <span asp-validation-for="Enderecos[0].Logradouro" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="form-group">
+                        <label asp-for="Enderecos[0].Numero" class="control-label">Número *</label>
+                        <input asp-for="Enderecos[0].Numero" class="form-control" />
+                        <span asp-validation-for="Enderecos[0].Numero" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="Enderecos[0].Complemento" class="control-label">Complemento </label>
+                        <input asp-for="Enderecos[0].Complemento" class="form-control" />
+                        <span asp-validation-for="Enderecos[0].Complemento" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="Enderecos[0].Bairro" class="control-label">Bairro *</label>
+                        <input asp-for="Enderecos[0].Bairro" class="form-control" />
+                        <span asp-validation-for="Enderecos[0].Bairro" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="Enderecos[0].Cidade" class="control-label">Cidade *</label>
+                        <input asp-for="Enderecos[0].Cidade" class="form-control" />
+                        <span asp-validation-for="Enderecos[0].Cidade" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-1 mb-3">
+                    <div class="form-group">
+                        <label asp-for="Enderecos[0].Uf" class="control-label">UF *</label>
+                        @Html.DropDownListFor(model => model.Enderecos[0].Uf, Enum.GetValues(typeof(EUF)).Cast<EUF>().Select(v => new SelectListItem
+                   {
+                       Text = v.ToString(),
+                       Value = v.ToString()
+                   }), "--- Opções --- ▼", new { @class = "form-control" })
+                        <span asp-validation-for="Enderecos[0].Uf" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Atualizar" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para lista de clientes</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
